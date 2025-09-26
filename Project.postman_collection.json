@@ -1,0 +1,410 @@
+{
+	"info": {
+		"_postman_id": "6f53a0a1-8210-4737-83ac-c67241cf9e84",
+		"name": "Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47750562",
+		"_collection_link": "https://lilian523krevetka-331620.postman.co/workspace/Lilian-Berdar's-Workspace~2900b684-07e8-452a-8756-34ed55fd31fe/collection/47750562-6f53a0a1-8210-4737-83ac-c67241cf9e84?action=share&source=collection_link&creator=47750562"
+	},
+	"item": [
+		{
+			"name": "Get User with Custom ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{useURL}}?id=\"1505e6aa-0679-4258-860d-3a2284238446\"",
+					"host": [
+						"{{useURL}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "\"1505e6aa-0679-4258-860d-3a2284238446\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Lilian",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Kharkiv",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{useURL}}?id=\"1505e6aa-0679-4258-860d-3a2284238446\"",
+					"host": [
+						"{{useURL}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "\"1505e6aa-0679-4258-860d-3a2284238446\""
+						}
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Create user Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"age\":15,\r\n    \"city\": \"UK\",\r\n    \"gender\": \"male\",\r\n    \"name\": \"Peppa\"\r\n}"
+				},
+				"url": {
+					"raw": "{{useURL}}?id=\"1505e6aa-0679-4258-860d-3a2284238446\"",
+					"host": [
+						"{{useURL}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "\"1505e6aa-0679-4258-860d-3a2284238446\""
+						}
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Lilian",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "32",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Kyiv",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "\"b620676d-5f48-41e9-8475-f5c48a2e9651\"",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{useURL}}?id=\"1505e6aa-0679-4258-860d-3a2284238446\"",
+					"host": [
+						"{{useURL}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "\"1505e6aa-0679-4258-860d-3a2284238446\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user Copy",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"age\": 22,\r\n    \"city\": \"Kyiv\",\r\n    \"gender\": \"female \",\r\n    \"name\": \" \",\r\n    \"id\": \"b620676d-5f48-41e9-8475-f5c48a2e9651\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{useURL}}?id=\"1505e6aa-0679-4258-860d-3a2284238446\"",
+					"host": [
+						"{{useURL}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "\"1505e6aa-0679-4258-860d-3a2284238446\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update2user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\": \"Keviin\",\r\n    \"id\": \"b620676d-5f48-41e9-8475-f5c48a2e9651\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{useURL}}?id=\"1505e6aa-0679-4258-860d-3a2284238446\"",
+					"host": [
+						"{{useURL}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "\"1505e6aa-0679-4258-860d-3a2284238446\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update2user Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Kevin",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "b620676d-5f48-41e9-8475-f5c48a2e9651",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{useURL}}?id=\"1505e6aa-0679-4258-860d-3a2284238446\"",
+					"host": [
+						"{{useURL}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "\"1505e6aa-0679-4258-860d-3a2284238446\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User with Custom ID1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{useURL}}?id=\"b620676d-5f48-41e9-8475-f5c48a2e9651\"",
+					"host": [
+						"{{useURL}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "\"b620676d-5f48-41e9-8475-f5c48a2e9651\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User with Custom ID1 Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{useURL}}?id=\"dddoo55-dd\"",
+					"host": [
+						"{{useURL}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "\"dddoo55-dd\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User with Custom ID Scripts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Kevin\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{useURL}}?id=\"b620676d-5f48-41e9-8475-f5c48a2e9651\"",
+					"host": [
+						"{{useURL}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "\"b620676d-5f48-41e9-8475-f5c48a2e9651\""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL\n",
+			"value": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users"
+		},
+		{
+			"key": "useURL",
+			"value": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users",
+			"type": "default"
+		}
+	]
+}
