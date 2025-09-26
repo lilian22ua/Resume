@@ -1,0 +1,128 @@
+show databases;
+
+
+select p.Product_Name, p.Price, f.Quantity as Fridge_QTY, f.Expiration_Date
+from shopping_list p
+join fridge f on p.ID = f.Product_ID;
+
+USE shopping_list;
+
+select * from shopping_list;
+select * from fridge;
+
+select Product_Name from shopping_list where Product_Name like 'A%';
+
+select Product_Name from shopping_list where Product_Name like '______s';
+
+select p.Product_Name, p.Price, f.QUANTITY as Frige_QTY from shopping_list as p inner join fridge as f on p.ID = f.Product_ID;
+
+select p.Product_Name, p.Price, f.QUANTITY as Frige_QTY from shopping_list as p left join fridge as f on p.ID = f.Product_ID;
+
+select p.Product_Name, p.Price, f.QUANTITY as Frige_QTY 
+from shopping_list as p 
+right join fridge as f 
+on p.ID = f.Product_ID;
+
+select p.Product_Name, p.Price, f.QUANTITY as Frige_QTY from shopping_list as p inner join fridge as f on p.ID = f.Product_ID
+union
+select p.Product_Name, p.Price, f.QUANTITY as Frige_QTY from shopping_list as p left join fridge as f on p.ID = f.Product_ID;
+
+select p.Product_Name, p.Price, f.QUANTITY as Frige_QTY from shopping_list as p left join fridge as f on p.ID = f.Product_ID
+AND f.Expiration_Date >= '2025-09-01';
+
+select p.Product_Name, p.Price, f.QUANTITY as Frige_QTY from shopping_list as p left join fridge as f on p.ID = f.Product_ID
+where f.Expiration_Date >= '2025-09-01';
+
+select p.Product_Name, p.Price, f.Quantity from shopping_list as p
+right join fridge as f 
+on p.ID = f.Product_ID
+where p.ID IS not null;
+
+select p.Product_Name, p.Price, f.Quantity
+from shopping_list as p
+inner join fridge as f 
+on p.Product_Name = f.Product_Name;
+
+select * from order1;
+
+ALTER TABLE Order1
+ADD CONSTRAINT fk_order1_shopping
+FOREIGN KEY (Product_ID) REFERENCES Shopping_List(ID);
+
+INSERT INTO Order1 (Product_ID, Order_ID, Quantity, Date1)
+SELECT Product_ID, 2 AS Order_ID, 1 AS Quantity, CURDATE() AS Date1
+FROM Fridge
+WHERE Product_ID IS NOT NULL;
+
+CREATE TABLE Order2
+(Item_ID INT PRIMARY KEY AUTO_INCREMENT, Product_ID INT NOT NULL, Order_ID INT NOT NULL, Quantity INT, Date1 DATE,
+CONSTRAINT fk_product FOREIGN KEY (Product_ID) REFERENCES Shopping_List(ID)ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE Order2 (
+    Item_ID INT PRIMARY KEY AUTO_INCREMENT,
+    Product_ID INT NOT NULL,
+    Order_ID INT NOT NULL,
+    Quantity INT,
+    Date1 DATE,
+    CONSTRAINT fk_product 
+        FOREIGN KEY (Product_ID) REFERENCES Shopping_List(ID)
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
+);
+
+INSERT INTO Order2 (Product_ID, Order_ID, Quantity, Date1)
+SELECT ID, 1 AS Order_ID, 1 AS Quantity, CURDATE() AS Date1
+FROM Shopping_List;
+
+
+INSERT INTO Order2 (Product_ID, Order_ID, Quantity, Date1)
+SELECT f.Product_ID, 2 AS Order_ID, 1 AS Quantity, CURDATE() AS Date1
+FROM Fridge f
+JOIN Shopping_List s ON f.Product_ID = s.ID
+WHERE f.Product_ID IS NOT NULL;
+
+CREATE TABLE Order1
+(Item_ID INT PRIMARY KEY AUTO_INCREMENT, Product_ID INT NOT NULL, Order_ID INT NOT NULL, Quantity INT, Date1 DATE);
+
+select * from order1;
+
+INSERT INTO Order1 (Product_ID, Order_ID, Quantity, Date1) VALUES
+(101, 1, 5, '2025-09-01'),
+(102, 1, 2, '2025-09-01'),
+(103, 2, 10, '2025-09-02'),
+(104, 2, 1, '2025-09-02'),
+(105, 3, 3, '2025-09-03'),
+(106, 3, 7, '2025-09-03'),
+(107, 4, 4, '2025-09-04'),
+(108, 4, 6, '2025-09-04'),
+(109, 5, 8, '2025-09-05'),
+(110, 5, 9, '2025-09-05');
+
+DROP TABLE IF EXISTS Order1, Order2;
+
+SHOW TABLES;
+SELECT * FROM fridge;
+SELECT * FROM Shopping_List;
+
+CREATE TABLE Order0
+(Item_ID INT PRIMARY KEY AUTO_INCREMENT, Product_ID INT NOT NULL, Order_ID INT NOT NULL, Quantity INT, Date1 DATE,
+CONSTRAINT fk1_product FOREIGN KEY (Product_ID) REFERENCES Shopping_List(ID)ON DELETE CASCADE ON UPDATE CASCADE);
+
+INSERT INTO Order0 (Product_ID, Order_ID, Quantity, Date1)
+SELECT ID, 1 AS Order_ID, 1 AS Quantity, CURDATE() AS Date1
+FROM Shopping_List;
+
+INSERT INTO Order0 (Product_ID, Order_ID, Quantity, Date1)
+SELECT f.Product_ID, 2 AS Order_ID, 1 AS Quantity, CURDATE()
+FROM Fridge f
+JOIN Shopping_List s ON f.Product_ID = s.ID
+WHERE f.Product_ID IS NOT NULL;
+
+SELECT o.Item_ID, o.Product_ID, o.Order_ID, o.Quantity, o.Date1, s.Product_Name
+FROM Order0 o
+JOIN Shopping_List s ON o.Product_ID = s.ID;
+
+SELECT o.Item_ID, o.Product_ID, o.Order_ID, o.Quantity, o.Date1, f.Expiration_Date, f.Product_Name
+FROM Order0 o
+JOIN Fridge f ON o.Product_ID = f.Product_ID
+WHERE f.Expiration_Date < CURDATE();
