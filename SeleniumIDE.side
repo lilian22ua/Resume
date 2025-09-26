@@ -1,0 +1,407 @@
+{
+  "id": "ec63264f-fd46-40fb-833e-e11963e34446",
+  "version": "2.0",
+  "name": "Project",
+  "url": "https://samguk.com.ua/",
+  "tests": [{
+    "id": "7e1ebeb7-2cce-4862-a637-99105f8fac38",
+    "name": "Add product to the card via Search",
+    "commands": [{
+      "id": "662ae718-c6f0-4ce3-9992-c76786deceee",
+      "comment": "",
+      "command": "open",
+      "target": "https://samguk.com.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd88a006-6324-4bd5-b2bf-7791c0375774",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@id='68baada49ce56']",
+      "targets": [
+        ["id=68baada49ce56", "id"],
+        ["name=s", "name"],
+        ["css=#\\36 8baada49ce56", "css:finder"],
+        ["xpath=//input[@id='68baada49ce56']", "xpath:attributes"],
+        ["xpath=//div[@id='page']/header/div/div[2]/div/div[3]/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4540d1f6-33d7-4b5d-a556-2d43804592af",
+      "comment": "",
+      "command": "type",
+      "target": "css=#\\36 8baafda13187",
+      "targets": [
+        ["id=68baafda13187", "id"],
+        ["name=s", "name"],
+        ["css=#\\36 8baafda13187", "css:finder"],
+        ["xpath=//input[@id='68baafda13187']", "xpath:attributes"],
+        ["xpath=//div[@id='page']/header/div/div[2]/div/div[3]/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Рамьон"
+    }, {
+      "id": "4f2316ca-478a-4d81-bfbc-6596acdb2780",
+      "comment": "",
+      "command": "click",
+      "target": "css=.aws-form-active svg",
+      "targets": [
+        ["css=.aws-form-active svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "f856fcf0-a4b0-4bf1-9f68-d8b91d3185fd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product:nth-child(1) .product-thumb-wrap .attachment-woocommerce_thumbnail",
+      "targets": [
+        ["css=.product:nth-child(1) .product-thumb-wrap .attachment-woocommerce_thumbnail", "css:finder"],
+        ["xpath=//img[@alt='Рамьон Тигим удон кап, 62г']", "xpath:img"],
+        ["xpath=//div[@id='main']/div/div[2]/ul/li/div/div[2]/a/img", "xpath:idRelative"],
+        ["xpath=//li/div/div[2]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0894a17c-d134-486b-8148-c5282fd00045",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@name='add-to-cart']",
+      "targets": [
+        ["name=add-to-cart", "name"],
+        ["css=.single_add_to_cart_button", "css:finder"],
+        ["xpath=//button[@name='add-to-cart']", "xpath:attributes"],
+        ["xpath=//div[@id='product-113840']/div[2]/form/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63289d12-e458-4f3e-b207-7157a102b4be",
+      "comment": "",
+      "command": "click",
+      "target": "css=.wishlist-minicart-inner #woofc-count",
+      "targets": [
+        ["id=woofc-count", "id"],
+        ["css=.wishlist-minicart-inner #woofc-count", "css:finder"],
+        ["xpath=//div[@id='woofc-count']", "xpath:attributes"],
+        ["xpath=//div[@id='page']/header/div/div[2]/div/div[3]/div[2]/div/div[2]/div/div/button/div", "xpath:idRelative"],
+        ["xpath=//button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e92e4f57-3b4d-46d2-bd3e-88e9c2a0f5e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.closeCart",
+      "targets": [
+        ["css=.closeCart", "css:finder"],
+        ["xpath=//a[contains(text(),'Продовжити покупки')]", "xpath:link"],
+        ["xpath=//a[@onclick='window.CartPops.drawer.hide()']", "xpath:attributes"],
+        ["xpath=//div[@id='continueShopping']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://samguk.com.ua/products')])[65]", "xpath:href"],
+        ["xpath=//div[3]/div[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "00f1d7b2-0230-44e7-b05e-02c890cc933f",
+    "name": "Add product to the card via Menu",
+    "commands": [{
+      "id": "05ef2d97-7e6c-4a56-bfb3-eac7ada0806d",
+      "comment": "",
+      "command": "open",
+      "target": "https://samguk.com.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d40dba15-0362-4b67-a05d-6cfa0a15b4ad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.title",
+      "targets": [
+        ["css=.title", "css:finder"],
+        ["xpath=//div[@id='page']/header/div/div[3]/div/div/div/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'УСІ КАТЕГОРІЇ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "974aa10b-135a-4de8-a450-62dca8a74589",
+      "comment": "",
+      "command": "click",
+      "target": "css=#menu-item-2523 > a",
+      "targets": [
+        ["linkText=Снеки", "linkText"],
+        ["css=#menu-item-2523 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Снеки')]", "xpath:link"],
+        ["xpath=//li[@id='menu-item-2523']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://samguk.com.ua/products/sneki-i-sladosti/')]", "xpath:href"],
+        ["xpath=//li[10]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Снеки')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1eb47a85-b306-4ea0-a87b-556047697367",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product:nth-child(1) .woocommerce-loop-product__title",
+      "targets": [
+        ["css=.product:nth-child(1) .woocommerce-loop-product__title", "css:finder"],
+        ["xpath=//div[@id='main']/div/div[2]/ul/li/div/div[3]/a[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Снек із водоростей з Барбекю, 1 пачка')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2492313-d999-4bef-877b-7b58a13fd5cb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@name='add-to-cart']",
+      "targets": [
+        ["name=add-to-cart", "name"],
+        ["css=.single_add_to_cart_button", "css:finder"],
+        ["xpath=//button[@name='add-to-cart']", "xpath:attributes"],
+        ["xpath=//div[@id='product-10777']/div[2]/form/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ac922be-4d48-49de-bfcc-ac5642962caa",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='woofc-count']",
+      "targets": [
+        ["id=woofc-count", "id"],
+        ["css=.wishlist-minicart-inner #woofc-count", "css:finder"],
+        ["xpath=//div[@id='woofc-count']", "xpath:attributes"],
+        ["xpath=//div[@id='page']/header/div/div[2]/div/div[3]/div[2]/div/div[2]/div/div/button/div", "xpath:idRelative"],
+        ["xpath=//button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "efe7d1ad-c544-4455-a70b-0fc756ef711f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.closeCart",
+      "targets": [
+        ["css=.closeCart", "css:finder"],
+        ["xpath=//a[contains(text(),'Продовжити покупки')]", "xpath:link"],
+        ["xpath=//a[@onclick='window.CartPops.drawer.hide()']", "xpath:attributes"],
+        ["xpath=//div[@id='continueShopping']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://samguk.com.ua/products')])[67]", "xpath:href"],
+        ["xpath=//div[3]/div[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6ce44c4d-f65c-4912-b781-d5f20d2de860",
+    "name": "Delete product in the card",
+    "commands": [{
+      "id": "6d9e61bb-930e-4320-a0ff-9cfee3340bac",
+      "comment": "",
+      "command": "open",
+      "target": "https://samguk.com.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5e32a10-bc9a-4589-a39b-88a3a9690d5e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='content']/div[2]/section[7]/div/div/div/div/div/section/div/div/div/div/div/ul/li[2]/div/div[3]/a[2]",
+      "targets": [
+        ["linkText=Пультак з бульйоном Stew Type, 145 г", "linkText"],
+        ["css=.post-113934 .woocommerce-LoopProduct-link:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='content']/div[2]/section[7]/div/div/div/div/div/section/div/div/div/div/div/ul/li[2]/div/div[3]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://samguk.com.ua/product-category/ramyon/%d0%bb%d0%be%d0%ba%d1%88%d0%b8%d0%bd%d0%b0-%d0%bf%d1%83%d0%bb%d1%8c%d1%82%d0%b0%d0%ba-stew-type-145-%d0%b3/')])[3]", "xpath:href"],
+        ["xpath=//li[2]/div/div[3]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Пультак з бульйоном Stew Type, 145 г')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "67f35519-53e5-4759-8a3b-f55c82b637bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.single_add_to_cart_button",
+      "targets": [
+        ["name=add-to-cart", "name"],
+        ["css=.single_add_to_cart_button", "css:finder"],
+        ["xpath=//button[@name='add-to-cart']", "xpath:attributes"],
+        ["xpath=//div[@id='product-113934']/div[2]/form/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "79904ff6-c63a-4323-95eb-242ba21c6a80",
+      "comment": "",
+      "command": "click",
+      "target": "css=path:nth-child(2)",
+      "targets": [
+        ["css=path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "60960c87-ccda-490a-a0f3-5676105e6531",
+    "name": "Changing number of product in the card",
+    "commands": [{
+      "id": "241c43b7-d4b5-4589-92b9-c30030a051b0",
+      "comment": "",
+      "command": "open",
+      "target": "https://samguk.com.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f41a2fe-be45-4392-b88d-4ff48b3d9737",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='content']/div[2]/section[7]/div/div/div/div/div/section/div/div/div/div/div/ul/li[5]/div/div[3]/a[2]",
+      "targets": [
+        ["linkText=Рамьон Ногурі Nongshim , 120 г", "linkText"],
+        ["css=.post-113715 .woocommerce-LoopProduct-link:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='content']/div[2]/section[7]/div/div/div/div/div/section/div/div/div/div/div/ul/li[5]/div/div[3]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://samguk.com.ua/product-category/ramyon/%d1%80%d0%b0%d0%bc%d1%8c%d0%be%d0%bd-%d0%bd%d0%be%d0%b3%d1%83%d1%80%d1%96-nongshim-120-%d0%b3/')])[3]", "xpath:href"],
+        ["xpath=//li[5]/div/div[3]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Рамьон Ногурі Nongshim , 120 г')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bc3bf88-1074-45fa-b463-695e2292403c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@name='add-to-cart']",
+      "targets": [
+        ["name=add-to-cart", "name"],
+        ["css=.single_add_to_cart_button", "css:finder"],
+        ["xpath=//button[@name='add-to-cart']", "xpath:attributes"],
+        ["xpath=//div[@id='product-113715']/div[2]/form/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34119cb4-1e29-4c6a-ad15-9fd0d3792335",
+      "comment": "",
+      "command": "click",
+      "target": "css=.wishlist-minicart-inner #woofc-count",
+      "targets": [
+        ["id=woofc-count", "id"],
+        ["css=.wishlist-minicart-inner #woofc-count", "css:finder"],
+        ["xpath=//div[@id='woofc-count']", "xpath:attributes"],
+        ["xpath=//div[@id='page']/header/div/div[2]/div/div[3]/div[2]/div/div[2]/div/div/button/div", "xpath:idRelative"],
+        ["xpath=//button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5da2b34-f0aa-45b1-b4c2-4120c2cc3dda",
+      "comment": "",
+      "command": "click",
+      "target": "css=.quantity__button--up",
+      "targets": [
+        ["css=.quantity__button--up", "css:finder"],
+        ["xpath=//div[@id='cartpops-drawer']/div[2]/div[2]/div/div/div[2]/div[2]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d275e66-9db1-435b-8c25-380f2b8ba36b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cpops-drawer-header__close",
+      "targets": [
+        ["css=.cpops-drawer-header__close", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='cartpops-drawer']/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Close cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e9d6316d-1cac-470b-9f47-35cb8218f53a",
+    "name": "Add product to the Vishlist via tab Пропозиції",
+    "commands": [{
+      "id": "403c7771-6930-4d1b-9ac4-71efbbf44e7b",
+      "comment": "",
+      "command": "open",
+      "target": "https://samguk.com.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ee47f62-75e4-484c-b864-8b50e57a1689",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Рекомендовані набори ⭐️')]",
+      "targets": [
+        ["linkText=Рекомендовані набори ⭐️", "linkText"],
+        ["css=#menu-item-96536 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Рекомендовані набори ⭐️')]", "xpath:link"],
+        ["xpath=//li[@id='menu-item-96536']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://samguk.com.ua/products/rec_nabory/')]", "xpath:href"],
+        ["xpath=//li/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Рекомендовані набори ⭐️')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0232fadf-a605-4c20-a17e-0d8336da8148",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product:nth-child(3) .woocommerce-loop-product__title",
+      "targets": [
+        ["css=.product:nth-child(3) .woocommerce-loop-product__title", "css:finder"],
+        ["xpath=//div[@id='main']/div/div[2]/ul/li[3]/div/div[3]/a[2]/h3", "xpath:idRelative"],
+        ["xpath=//li[3]/div/div[3]/a[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Набір для приготування кімчі')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8fa2c6aa-a128-49d0-8624-48ff9a1a7d93",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tinvwl_add_to_wishlist_button",
+      "targets": [
+        ["name=%d0%b4%d0%be%d0%b4%d0%b0%d1%82%d0%b8-%d0%b4%d0%be-%d1%81%d0%bf%d0%b8%d1%81%d0%ba%d1%83-%d0%b1%d0%b0%d0%b6%d0%b0%d0%bd%d1%8c", "name"],
+        ["css=.tinvwl_add_to_wishlist_button", "css:finder"],
+        ["xpath=//a[@name='%d0%b4%d0%be%d0%b4%d0%b0%d1%82%d0%b8-%d0%b4%d0%be-%d1%81%d0%bf%d0%b8%d1%81%d0%ba%d1%83-%d0%b1%d0%b0%d0%b6%d0%b0%d0%bd%d1%8c']", "xpath:attributes"],
+        ["xpath=//div[@id='product-109489']/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Додати до списку бажань')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "75001750-089f-492f-a544-8133e0e5e10e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[2]/img",
+      "targets": [
+        ["css=.wishlist-minicart-wrapper > a:nth-child(3) > img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://samguk.com.ua/wp-content/themes/orchid-store/assets/images/wishlist.png')]", "xpath:img"],
+        ["xpath=//div[@id='page']/header/div/div[2]/div/div[3]/div[2]/div/div[2]/a[2]/img", "xpath:idRelative"],
+        ["xpath=//a[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "42691fe7-8b43-4aba-b734-db0916fdf14c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//a[contains(text(),'Повернутися до магазину')]", "xpath:link"],
+        ["xpath=//article[@id='post-13']/div/div/p[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://samguk.com.ua/products/')])[50]", "xpath:href"],
+        ["xpath=//p[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7836cdde-1e5f-4d35-91d1-71da6b0f3338",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7e1ebeb7-2cce-4862-a637-99105f8fac38"]
+  }],
+  "urls": ["https://samguk.com.ua/"],
+  "plugins": []
+}
